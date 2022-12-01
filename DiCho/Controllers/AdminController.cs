@@ -13,8 +13,12 @@ namespace DiCho.Controllers
         {
             return View();
         }
+        [ChildActionOnly] 
+        public ActionResult Renderpartial() {
 
- 
+            return PartialView("_PartialNav");
+        }
+       
     }
 
 }

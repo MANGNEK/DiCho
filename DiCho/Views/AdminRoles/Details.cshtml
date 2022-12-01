@@ -1,42 +1,41 @@
 ﻿@model DiCho.Models.Role
 
 @{
+    ViewData["Title"] = "Thông Tin Quyền Truy Cập";
     Layout = "~/Views/Admin/Shared/Layout_Admin.cshtml";
 }
+<nav class="breadcrumb breadcrumb-dash">
+    <a href="@Url.Action("Index","Admin")" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home</a>
+    <a class="breadcrumb-item" href="@Url.Action("Index","AdminRoles")">Quản Lý Quyền Truy Cập</a>
+    <span class="breadcrumb-item active">Thông Tin Quyền Truy Cập</span>
+</nav>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Thông Tin Quyền Truy Cập</h4>
+        <div class="table-responsive">
+            <div class="product-info-table m-t-20">
 
-<!DOCTYPE html>
+                <tbody>
+                    <tr>
+                        <td>ID: </td>
+                        <td>@Model.RoleID</td>
+                        <br />
+                    </tr>
+                    <tr>
+                        <td>Tên Quyền Truy Cập : </td>
+                        <td>@Model.RoleName</td>
+                        <br />
+                    </tr>
+                    <tr>
+                        <td>Mô Tả : </td>
+                        <td>@Model.Description</td>
+                    </tr>
+                </tbody>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <div>
-        <h4>Role</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.RoleName)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.RoleName)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Description)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Description)
-            </dd>
-    
-        </dl>
+
+            </div>
+        </div>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.RoleID }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</body>
-</html>
+</div>
+
+

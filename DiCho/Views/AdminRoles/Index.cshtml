@@ -1,47 +1,39 @@
 ﻿@model IEnumerable<DiCho.Models.Role>
 
 @{
+    ViewData["Title"] = "Quản Lý Quyền Truy Cập";
     Layout = "~/Views/Admin/Shared/Layout_Admin.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+<a  class="btn btn-warning m-r-5" href="@Url.Action("Create","AdminRoles")">Thêm Mới</a>
+<div class="table-responsive">
     <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.RoleName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.RoleName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.RoleID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.RoleID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.RoleID })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Mô Tả</th>
+                <th scope="col">Chỉnh Sửa</th>
+            </tr>
+        </thead>
+        <tbody>
+           @if (Model != null)
+           { foreach(var item in Model)
+                {
+                   <tr>
+                       <th scope="row">@item.RoleID</th>
+                       <td> @item.RoleName</td>
+                       <td> @item.Description</td>
+                       <td>
+                           <a class="btn btn-primary m-r-5" href="@Url.Action("Details", "Adminroles", new {id=item.RoleID} )" >Xem</a>
+                           <a class="btn btn-success m-r-5" href="@Url.Action("Edit","Adminroles", new {id=item.RoleID})">Chỉnh Sửa</a>
+                           <a class="btn btn-secondary m-r-5" href="@Url.Action("Delete","Adminroles", new {id=item.RoleID})">Xóa</a>                          
+                       </td>
+                   </tr>
+                
+                    }
+
+           }
+                    </tbody>
+</table>
+</div>
+

@@ -964,12 +964,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Admin\Shared\Layout_Admin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\_PartialNav.cshtml" />
     <Content Include="Views\AdminRoles\Create.cshtml" />
     <Content Include="Views\AdminRoles\Delete.cshtml" />
     <Content Include="Views\AdminRoles\Details.cshtml" />
     <Content Include="Views\AdminRoles\Edit.cshtml" />
     <Content Include="Views\AdminRoles\Index.cshtml" />
+    <Content Include="Views\Admin\_PartialNav.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

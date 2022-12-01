@@ -45,7 +45,7 @@
                             <a href="javascript:void(0);">
                                 <i class="anticon"></i>
                             </a>
-                        </li>                  
+                        </li>
                     </ul>
                     <ul class="nav-right">
                         <li class="dropdown dropdown-animated scale-left">
@@ -167,20 +167,20 @@
                                     </div>
                                 </a>
                             </div>
-                        </li>                        
+                        </li>
                     </ul>
                 </div>
             </div>
             <!-- Header END -->
             <!-- Side Nav START -->
-                
+            @Html.Partial("~/Views/Admin/_PartialNav.cshtml")
             <!-- Side Nav END -->
             <!-- Page Container START -->
-            <div class="page-container"> 
+            <div class="page-container">
 
                 <!-- Content Wrapper START -->
                 <div class="main-content">
-                   @RenderBody()
+                    @RenderBody()
                 </div>
                 <!-- Content Wrapper END -->
                 <!-- Footer START -->
@@ -197,8 +197,8 @@
 
             </div>
             <!-- Page Container END -->
-           
-          
+
+
         </div>
     </div>
 
