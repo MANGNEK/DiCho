@@ -4,6 +4,15 @@
     ViewData["Title"] = "Quản Lý Quyền Truy Cập";
     Layout = "~/Views/Admin/Shared/Layout_Admin.cshtml";
 }
+
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div id="AlerBox" class="alert @TempData["AlertType"] hide">
+            @TempData["AlerMessage"]
+        </div>
+    }
+
+
 <a  class="btn btn-warning m-r-5" href="@Url.Action("Create","AdminRoles")">Thêm Mới</a>
 <div class="table-responsive">
     <table class="table">

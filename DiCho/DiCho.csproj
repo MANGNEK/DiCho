@@ -130,6 +130,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminAccountsController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminRolesController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
@@ -1215,6 +1216,11 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\AdminAccounts\Create.cshtml" />
+    <Content Include="Views\AdminAccounts\Delete.cshtml" />
+    <Content Include="Views\AdminAccounts\Details.cshtml" />
+    <Content Include="Views\AdminAccounts\Edit.cshtml" />
+    <Content Include="Views\AdminAccounts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

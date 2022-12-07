@@ -12,6 +12,22 @@ namespace DiCho.Controllers
 {
     public class AdminRolesController : Controller
     {
+        protected void SetAlert(String message, string type)
+        {
+            TempData["AlertMessage"] = message;
+            if (type == "success")
+            {
+                TempData["AlertType"] = "alert-success";
+            }
+            else if (type == "warning")
+            {
+                TempData["AlertType"] = "alert-warning";
+            }
+            else if (type == "error")
+            {
+                TempData["AlertType"] = "alert-danger";
+            }
+        }
         private DBMaker db = new DBMaker();
 
         // GET: AdminRoles
@@ -53,6 +69,7 @@ namespace DiCho.Controllers
                 db.Roles.Add(role);
                 db.SaveChanges();
                 return RedirectToAction("Index");
+                SetAlert("Them Thanh Cong !!!", "success");
             }
 
             return View(role);
